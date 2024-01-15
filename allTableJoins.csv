@@ -31,9 +31,12 @@
 "dpm_sensor","Any other table","Join not recommended: dpm_sensor contains records of collection assembly status every 10 seconds. Collections are made every two weeks.","Join not recommended: dpm_sensor contains records of collection assembly status every 10 seconds. Collections are made every two weeks.",NA
 "brd_perpoint","brd_countdata","eventID, pointID","eventID, pointID",NA
 "brd_perpoint","brd_references","siteID, startDate","siteID, date",NA
+"brd_countdata","brd_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "brd_countdata","brd_references","Join not recommended: References apply to entire observation period. Connect references to observations via siteID and dates.","",NA
 "brd_personnel","Any other table","Join not recommended: Personnel are tested annually. To find relevant scores, measuredBy and technicianID fields match for the same observer, and test scores are relevant to data collected during the year of the test(s).","",NA
+"cdw_fieldtally","cdw_tally_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "cdw_densitylog","cdw_densitydisk","sampleID","sampleID",NA
+"cdw_densitylog","cdw_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "dhp_perplot","dhp_perimagefile","sampleID","sampleID",NA
 "bet_fielddata","bet_sorting","sampleID","sampleID",NA
 "bet_sorting","bet_parataxonomistID","subsampleID","subsampleID",NA
@@ -223,6 +226,7 @@
 "vst_non-woody","vst_perplotperyear","Join not recommended: vst_perplotperyear provides annual metadata at the plot level","Join not recommended: vst_perplotperyear provides annual metadata at the plot level",NA
 "vst_non-woody","vst_apparentindividual","Join not recommended: vst_non-woody and vst_apparentindividual represent non-overlapping sets of plants","Join not recommended: vst_non-woody and vst_apparentindividual represent non-overlapping sets of plants",NA
 "vst_mappingandtagging","vst_non-woody","individualID","individualID",NA
+"vst_mappingandtagging","vst_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "sme_microbialBiomass","sme_batchResults","batchID","batchID",NA
 "sme_microbialBiomass","sls_soilCoreCollection","biomassID","biomassID",NA
 "sme_labSummary","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
