@@ -227,6 +227,8 @@
 "vst_non-woody","vst_apparentindividual","Join not recommended: vst_non-woody and vst_apparentindividual represent non-overlapping sets of plants","Join not recommended: vst_non-woody and vst_apparentindividual represent non-overlapping sets of plants",NA
 "vst_mappingandtagging","vst_non-woody","individualID","individualID",NA
 "vst_mappingandtagging","vst_identificationHistory","identificationHistoryID","identificationHistoryID",NA
+"sme_scaledMicrobialBiomass","sme_batchResults","batchID","batchID",NA
+"sme_scaledMicrobialBiomass","sls_soilCoreCollection","biomassID","biomassID",NA
 "sme_microbialBiomass","sme_batchResults","batchID","batchID",NA
 "sme_microbialBiomass","sls_soilCoreCollection","biomassID","biomassID",NA
 "sme_labSummary","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
