@@ -2,4 +2,4 @@
 |------------------------|------------------------|-------------------------------|
 tck_fielddata|tck_taxonomyProcessed|sampleID
 tck_fielddata|tck_taxonomyRaw|subsampleID
-tck_taxonomyProcessed|tck_taxonomyRaw|sampleID
+tck_taxonomyProcessed|tck_taxonomyRaw|Join not recommended
