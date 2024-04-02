@@ -1,8 +1,8 @@
 "Table1","Table2","JoinByTable1","JoinByTable2","Notes"
-"wdp_collection","wdp_collectionChem","chemSubsampleID","sampleID",NA
+"wdp_collection","wdp_collectionChem","chemSubsampleID","chemSubsampleID",NA
 "wdp_collection","wdp_chemLab","chemSubsampleID","chemSubsampleID",NA
 "wdp_collection","wdi_collection","sampleID","sampleID",NA
-"wdp_chemLab","wdp_collectionChem","chemSubsampleID","sampleID",NA
+"wdp_chemLab","wdp_collectionChem","chemSubsampleID","chemSubsampleID",NA
 "wdp_sensor","Any other table","Join not recommended: wdp_sensor contains records of collection assembly status every 10 seconds. Collections are made every two weeks.","Join not recommended: wdp_sensor contains records of collection assembly status every 10 seconds. Collections are made every two weeks.",NA
 "wdi_collection","wdp_collection","sampleID","sampleID",NA
 "wdi_collection","wdi_collectionIso","sampleID","sampleID",NA
