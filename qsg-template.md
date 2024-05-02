@@ -2,10 +2,10 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>NEON Data Product Quick Start Guide - {{> DP.PRODUCT_CODE }}</title>
-    <meta name="subject" content="NEON Data Product Quick Start Guide - {{> DP.PRODUCT_CODE }}"/>
+    <title>NEON Data Product Quick Start Guide - {{> DP.PRODUCT_CODE ignoreNoWrap }}</title>
+    <meta name="subject" content="NEON Data Product Quick Start Guide - {{> DP.PRODUCT_CODE ignoreNoWrap }}"/>
     <meta name="author" content="National Ecological Observatory Network"/>
-    <meta name="description" content="NEON Data Product Quick Start Guide - {{> DP.PRODUCT_CODE }}"/>
+    <meta name="description" content="NEON Data Product Quick Start Guide - {{> DP.PRODUCT_CODE ignoreNoWrap }}"/>
     <style neon-qsg-standalone-html-remove>
         @page {
             size: letter;
@@ -34,21 +34,11 @@
         }
     </style>
     <style neon-qsg-standalone-html-remove>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-        }
         header {
             position: running(neon-header);
         }
         footer {
             position: running(neon-footer);
-        }
-        table,
-        div.pdf-ua-display-as-table {
-            -fs-table-paginate: paginate;
-            margin-left: 1px;
-            margin-right: 1px;
         }
     </style>
 </head>
@@ -103,6 +93,8 @@
 ## Collection methodology
 {{. Collection.methodology }}
 
+For information about disturbances, land management activities, and other incidents that may impact data at NEON sites, see the [Site management and event reporting (DP1.10111.001)](https://data.neonscience.org/data-products/DP1.10111.001) data product.
+
 {{if REPO.FILE [Maintenance.and.calibration] }}
 ## Maintenance and calibration
 {{. Maintenance.and.calibration }}  
@@ -140,6 +132,8 @@ validation: Description of data validation applied at the points of collection a
 
 {{if REPO.FILE [Standard.calculations] }}
 ## Standard calculations
+For wrapper functions to download data from the API, and functions to merge tabular data files across sites and months, see the [neonUtilities R package](https://cran.r-project.org/web/packages/neonUtilities/index.html).
+
 {{. Standard.calculations }}  
 {{end}}
 
