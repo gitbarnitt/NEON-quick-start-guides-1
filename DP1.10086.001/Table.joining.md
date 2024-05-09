@@ -17,7 +17,7 @@ ntr_externalLab|sls_soilMoisture|sampleID
 ntr_externalLab|sls_soilpH|sampleID
 ntr_internalLab|sls_bgcSubsampling|sampleID
 ntr_internalLab|sls_metagenomicsPooling|Direct join not recommended: nitrogen incubations are carried out on a different set of samples from genomic sequencing
-ntr_internalLab|sls_soilChemistry|sampeID
+ntr_internalLab|sls_soilChemistry|sampleID
 ntr_internalLab|sls_soilMoisture|sampleID
 ntr_internalLab|sls_soilpH|sampleID
 ntr_internalLabBlanks|sls_bgcSubsampling|Join not recommended: lab blanks are only relevant to nitrogen incubation samples
