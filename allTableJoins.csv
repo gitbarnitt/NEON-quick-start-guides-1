@@ -29,10 +29,9 @@
 "dpm_field","dpm_lab","sampleID","sampleID",NA
 "dpm_lab","dpm_filterBlank","Join not recommended: dpm_filterBlank is for sample request purposes. These samples are not sent to the field or analyzed by the lab.","Join not recommended: dpm_filterBlank is for sample request purposes. These samples are not sent to the field or analyzed by the lab.",NA
 "dpm_sensor","Any other table","Join not recommended: dpm_sensor contains records of collection assembly status every 10 seconds. Collections are made every two weeks.","Join not recommended: dpm_sensor contains records of collection assembly status every 10 seconds. Collections are made every two weeks.",NA
-"brd_perpoint","brd_countdata","eventID, pointID","eventID, pointID",NA
-"brd_perpoint","brd_references","siteID, startDate","siteID, date",NA
+"brd_perpoint","brd_countdata","eventID, plotID, pointID","eventID, plotID, pointID",NA
 "brd_countdata","brd_identificationHistory","identificationHistoryID","identificationHistoryID",NA
-"brd_countdata","brd_references","Join not recommended: References apply to entire observation period. Connect references to observations via siteID and dates.","",NA
+"brd_references","Any other table","Join not recommended: References apply to entire siteID by year combination. Connect references to observations via siteID and the year component of startDate.","",NA
 "brd_personnel","Any other table","Join not recommended: Personnel are tested annually. To find relevant scores, measuredBy and technicianID fields match for the same observer, and test scores are relevant to data collected during the year of the test(s).","",NA
 "cdw_fieldtally","cdw_tally_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "cdw_densitylog","cdw_densitydisk","sampleID","sampleID",NA
@@ -141,12 +140,16 @@
 "phe_perindividual","phe_statusintensity","individualID","individualID",NA
 "phe_perindividualperyear","phe_statusintensity","Not fully automatable: join by individualID, then by year as calculated from the date in each table","Not fully automatable: join by individualID, then by year as calculated from the date in each table",NA
 "div_1m2Data","div_10m2Data100m2Data","Direct join not recommended. See Standard calculations.","Direct join not recommended. See Standard calculations.",NA
-"div_geneticarchive","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
+"div_1m2Data","div_morphospecies","siteID, morphospeciesID","siteID, morphospeciesID",NA
+"div_1m2Data","div_identificationHistory","identificationHistoryID","identificationHistoryID",NA
+"div_10m2Data100m2Data","div_morphospecies","siteID, morphospeciesID","siteID, morphospeciesID",NA
+"div_10m2Data100m2Data","div_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "div_morphospecies","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
-"div_voucher","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
+"div_geneticarchive","div_identificationHistory","identificationHistoryID","identificationHistoryID",NA
+"div_voucher","div_identificationHistory","identificationHistoryID","identificationHistoryID",NA
 "rpt_bloodtesting","mam_pertrapnight","bloodSampleID","bloodSampleID",NA
-"rpt2_pathogentesting","mam_pertrapnight","sampleID","Not fully automatable: pathogen testing results should be filtered to sampleIDs ending in either .E or .B and joined to mammal data via the earSampleID or via the bloodSampleID respectively.",NA
-"rpt2_pathogentesting","rpt2_pathogenqa","Simple join not recommended. BatchIDs used for joining are replicated in both tables such that joining tables results in repeated records.  It is recommended to convert the pathogenqa table to wide format with multiple columns for controlType, then join by batchID.","",NA
+"rpt2_pathogentesting","mam_pertrapnight","Not fully automatable: pathogen testing results should be filtered to sampleIDs ending in either .E or .B and joined to mammal data via the earSampleID or via the bloodSampleID respectively.","Not fully automatable: pathogen testing results should be filtered to sampleIDs ending in either .E or .B and joined to mammal data via the earSampleID or via the bloodSampleID respectively.",NA
+"rpt2_pathogentesting","rpt2_pathogenqa","Simple join not recommended. BatchIDs used for joining are replicated in both tables such that joining tables results in repeated records.  It is recommended to convert the pathogenqa table to wide format with multiple columns for controlType, then join by batchID.","Simple join not recommended. BatchIDs used for joining are replicated in both tables such that joining tables results in repeated records.  It is recommended to convert the pathogenqa table to wide format with multiple columns for controlType, then join by batchID.",NA
 "mpr_perpitprofile","mpr_perdepthincrement","pitProfileID","pitProfileID",NA
 "mpr_perdepthincrement","mpr_perrootsample","depthIncrementID","depthIncrementID",NA
 "mpr_perrootsample","mpr_carbonNitrogen","sampleID","cnSampleID",NA
@@ -181,15 +184,15 @@
 "sls_soilCoreCollection","ntr_internalLab","sampleID","sampleID",NA
 "ntr_internalLab","ntr_externalLab","kclSampleID","kclSampleID",NA
 "ntr_externalLab","ntr_internalLabBlanks","Not fully automatable: kclSampleID in ntr_externalLab includes samples labeled as kclBlank1ID, kclBlank2ID, and kclBlank3ID in ntr_internalLabBlanks","Not fully automatable: kclSampleID in ntr_externalLab includes samples labeled as kclBlank1ID, kclBlank2ID, and kclBlank3ID in ntr_internalLabBlanks",NA
-"ntr_externalLab","sls_bgcSubsampling","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses",NA
+"ntr_externalLab","sls_bgcSubsampling","sampleID","sampleID",NA
 "ntr_externalLab","sls_metagenomicsPooling","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from genomic sequencing","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from genomic sequencing",NA
-"ntr_externalLab","sls_soilChemistry","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses",NA
+"ntr_externalLab","sls_soilChemistry","sampleID","sampleID",NA
 "ntr_externalLab","sls_soilCoreCollection","sampleID","sampleID",NA
 "ntr_externalLab","sls_soilMoisture","sampleID","sampleID",NA
 "ntr_externalLab","sls_soilpH","sampleID","sampleID",NA
-"ntr_internalLab","sls_bgcSubsampling","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses",NA
+"ntr_internalLab","sls_bgcSubsampling","sampleID","sampleID",NA
 "ntr_internalLab","sls_metagenomicsPooling","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from genomic sequencing","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from genomic sequencing",NA
-"ntr_internalLab","sls_soilChemistry","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses","Direct join not recommended: nitrogen incubations are carried out on a different set of samples from other chemical analyses",NA
+"ntr_internalLab","sls_soilChemistry","sampleID","sampleID",NA
 "ntr_internalLab","sls_soilMoisture","sampleID","sampleID",NA
 "ntr_internalLab","sls_soilpH","sampleID","sampleID",NA
 "ntr_internalLabBlanks","sls_bgcSubsampling","Join not recommended: lab blanks are only relevant to nitrogen incubation samples","Join not recommended: lab blanks are only relevant to nitrogen incubation samples",NA
