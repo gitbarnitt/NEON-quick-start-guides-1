@@ -151,11 +151,11 @@ For wrapper functions to download data from the API, and functions to merge tabu
 {{if REPO.FILE [References] }}
 ## References
 {{. References }}  
+{{end}}
 
 ## Contact Us
-NEON welcomes discussion with data users! Reach out with any questions or concerns about NEON data: [Contact Us](https://www.neonscience.org/about/contact-us).
+NEON welcomes discussion with data users! Reach out with any questions or concerns about NEON data: [Contact Us](https://www.neonscience.org/about/contact-us)
 
-{{end}}
 
 </article>
 </main>
