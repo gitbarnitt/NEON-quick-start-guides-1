@@ -399,15 +399,25 @@
 "alg_algaeDataPerSampleCompCNPS","alg_algaeExternalLabQA","Join not recommended. Users interested in data quality can join by batchID, analyte, this will create a longer table that includes blanks and standards.","",NA
 "asi_externalLabPOMSummaryData","Any other table","Join not recommended. Quality control data can be connected to analyses by laboratoryName, analyte, and overlap of analysisDate with lab-specific start and end dates.","",NA
 "alg_fieldData","alg_biomass","parentSampleID","parentSampleID",NA
+"alg_fieldData","alg_biomassComp","compositeSampleID","compositeSampleID",NA
 "alg_biomass","alg_taxonomyProcessed","sampleID","sampleID",NA
+"alg_biomassComp","alg_taxonomyProcessedComp","analyteSampleID","sampleID",NA
 "alg_biomass","alg_taxonomyRaw","sampleID","sampleID",NA
-"alg_fieldData","alg_taxonomyProcessed","Requires intermediate table: join via alg_biomass table","Requires intermediate table: join via alg_biomass table",NA
-"alg_fieldData","alg_taxonomyRaw","Requires intermediate table: join via alg_biomass table","Requires intermediate table: join via alg_biomass table",NA
-"alg_qualityCheck","alg_taxonomyProcessed","sampleID, algalAnalysisMethod","sampleID, algalAnalysisMethod",NA
-"alg_qualityCheck","alg_taxonomyRaw","sampleID, algalAnalysisMethod","sampleID, algalAnalysisMethod",NA
-"alg_taxonomyProcessed","alg_taxonomyRaw","Join not recommended. These tables contain identifications of the same samples with possibly differing higher-order taxonomy; see User Guide.","Join not recommended. These tables contain identifications of the same samples with possibly differing higher-order taxonomy; see User Guide.",NA
-"alg_archive","Any other table","Join not recommended. This table is an account of subsamples shipped to the biorepository.","Join not recommended. This table is an account of subsamples shipped to the biorepository.",NA
-"alg_biovolumes","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
+"alg_biomassComp","alg_taxonomyRawComp","analyteSampleID","sampleID",NA
+"alg_fieldData","alg_taxonomyProcessed","Requires intermediate table: join via alg_biomass table","",NA
+"alg_fieldData","alg_taxonomyProcessedComp","Requires intermediate table: join via alg_biomassComp table","",NA
+"alg_fieldData","alg_taxonomyRaw","Requires intermediate table: join via alg_biomass table","",NA
+"alg_fieldData","alg_taxonomyRawComp","Requires intermediate table: join via alg_biomassComp table","",NA
+"alg_qualityCheck","alg_taxonomyProcessed","sampleID, algalAnalysisMethod","sampleID,algalAnalysisMethod",NA
+"alg_qualityCheck","alg_taxonomyRaw","sampleID, algalAnalysisMethod","sampleID,algalAnalysisMethod",NA
+"alg_taxonomyProcessed","alg_taxonomyRaw","Join not recommended. These tables contain identifications of the same samples with possibly differing higher-order taxonomy; see User Guide.","",NA
+"alg_taxonomyProcessedComp","alg_taxonomyRawComp","Join not recommended. These tables contain identifications of the same samples with possibly differing higher-order taxonomy; see User Guide.","",NA
+"alg_taxonomyProcessedComp","alg_voucherTaxonomy","scientificName,voucherFloraVersion","scientificName,voucherFloraVersion",NA
+"alg_taxonomyRawComp","alg_voucherTaxonomy","scientificName,voucherFloraVersion","scientificName,voucherFloraVersion",NA
+"alg_taxonomyProcessedComp","alg_slideLocations","slideID","slideID",NA
+"alg_taxonomyRawComp","alg_slideLocations","slideID","slideID",NA
+"alg_archive","Any other table","Join not recommended. This table is an account of subsamples shipped to the biorepository.","",NA
+"alg_biovolumes","Any other table","Join not recommended. Data resolution does not match other tables.","",NA
 "rea_fieldData","Any other table","Join not recommended: See Standard Calculations","Join not recommended: See Standard Calculations",NA
 "rea_backgroundFieldSaltData","Any other table","Join not recommended: See Standard Calculations","Join not recommended: See Standard Calculations",NA
 "rea_backgroundFieldCondData","Any other table","Join not recommended: See Standard Calculations","Join not recommended: See Standard Calculations",NA
